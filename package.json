@@ -1,0 +1,35 @@
+{
+  "name": "boiler",
+  "version": "1.0.0",
+  "description": "a boiler plate for node modules",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint './**/*.js'",
+    "prettier": "prettier --no-semi --single-quote --write './**/*.js'",
+    "prettier-check": "prettier-check --no-semi --single-quote --write './**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hobochild/boiler.git"
+  },
+  "keywords": [
+    "boilerplate"
+  ],
+  "author": "hobochild",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hobochild/boiler/issues"
+  },
+  "homepage": "https://github.com/hobochild/boiler#readme",
+  "dependencies": {
+    "eslint": "^4.14.0",
+    "jest": "^22.0.4",
+    "prettier": "^1.9.2",
+    "prettier-check": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^2.9.0"
+  }
+}
