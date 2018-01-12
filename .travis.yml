@@ -11,6 +11,7 @@ script:
   - yarn prettier-check
   - yarn lint
   - yarn test
+  - yarn build
 after_success:
   - npm run semantic-release
 branches:
