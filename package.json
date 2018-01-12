@@ -1,7 +1,7 @@
 {
   "name": "apollo-error-overlay",
   "version": "0.0.0-development",
-  "description": "Makes apollo client errors pretty and hard to miss",
+  "description": "Make apollo errors pretty and obvious",
   "main": "./dist/index.js",
   "scripts": {
     "test": "jest",

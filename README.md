@@ -2,11 +2,16 @@
 
 > Make apollo errors pretty and obvious
 
-Apollo client passes network and graphql errors as props to you components, this is great for fine grained control, but when you are developing you often want a global errorhandler to catch errors quickly. This package mimics the `react-error-overlay` produce more obvious errors in development.
+Apollo client passes network and graphql errors as props to you components, this is great for fine grained control but when you are developing you often want a global error handler to catch errors quickly.
+Works with all apollo-client bindings.
+
+## 👀 
+
+![demo](./demo.gif)
 
 # Usage
 
-```
+```javascript
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
@@ -39,6 +44,6 @@ return new ApolloClient({
 })
 ```
 
-## 👀 
+## Caveats
 
-![demo](./demo.gif)
+* Hot reloads currently only work with webpacks hmr
