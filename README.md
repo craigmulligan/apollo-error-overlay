@@ -2,14 +2,17 @@
 
 > Make apollo errors pretty and obvious
 
-Apollo client passes network and graphql errors as props to you components, this is great for fine grained control but when you are developing you often want a global error handler to catch errors quickly.
-Works with all apollo-client bindings.
+Apollo client passes network and graphql errors as props to you components, this is great for fine grained control, but when you are developing you often want a global error handler to catch errors quickly.
+Works with all apollo-client bindings (react, vue etc)
 
 ## 👀 
 
 ![demo](./demo.gif)
 
 # Usage
+```
+npm i apollo-error-overlay --save-dev
+```
 
 ```javascript
 import { ApolloClient } from 'apollo-client'
@@ -25,22 +28,14 @@ const errorLink = onError((errors) => {
 })
 
 // setup httpLink
-const httpLink = new httplink({
+const httpLink = new HttpLink({
   uri: `http://localhost:80/graphql` 
 })
 
 // add links to the client
 return new ApolloClient({
-  link: errorLink.concat(link),
-  cache: new InMemoryCache(),
-  defaultOptions: {
-    watchQuery: {
-      fetchPolicy: fetchPolicy()
-    },
-    query: {
-      fetchPolicy: fetchPolicy()
-    }
-  }
+  link: errorLink.concat(httpLink),
+  cache: new InMemoryCache()
 })
 ```
 
